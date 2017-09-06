@@ -57,7 +57,7 @@ class Demac_MultiLocationInventory_Model_CatalogInventory_Resource_Stock_Item ex
         $data = $this->_getReadAdapter()->fetchRow($select);
         if ($data) {
             $object->setDataUsingMethod('qty', $data['qty']);
-            $object->setDataUsingMethod('is_in_stock', $data['is_in_stock']);
+            $object->setDataUsingMethod('is_in_stock', $data['stock_status']);
         }
 
         return parent::_afterLoad($object);

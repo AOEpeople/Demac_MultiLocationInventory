@@ -15,6 +15,14 @@
                     </multilocationinventory_submit_all_after>
                 </observers>
             </checkout_submit_all_after>
+            <catalog_product_save_after>
+                <observers>
+                    <multi_location_inventory_product_save>
+                        <class>Demac_MultiLocationInventory_Model_Admin_Observer</class>
+                        <method>multiLocationInventoryProductSave</method>
+                    </multi_location_inventory_product_save>
+                </observers>
+            </catalog_product_save_after>
         </events>
         <index>
             <indexer>
@@ -132,16 +140,6 @@
                 </demac_multilocationinventory>
             </updates>
         </layout>
-        <events>
-            <catalog_product_save_after>
-                <observers>
-                    <multi_location_inventory_product_save>
-                        <class>Demac_MultiLocationInventory_Model_Admin_Observer</class>
-                        <method>multiLocationInventoryProductSave</method>
-                    </multi_location_inventory_product_save>
-                </observers>
-            </catalog_product_save_after>
-        </events>
     </adminhtml>
     <default>
         <demac_multilocationinventory>
